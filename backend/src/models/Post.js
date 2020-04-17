@@ -23,6 +23,7 @@ PostSchema.pre('save', function () {
     this.url = `${process.env.APP_URL}/files/${this.key}`;
   }
 });
+
 // eslint-disable-next-line prefer-arrow-callback
 PostSchema.pre('remove', function () {
   if (process.env.STORAGE_TYPE === 's3') {
