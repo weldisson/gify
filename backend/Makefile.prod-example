@@ -1,0 +1,32 @@
+pm2-start:
+	pm2 start dist/index.js
+
+pm2-stop:
+	pm2 stop index
+
+pm2-list:
+	pm2 list
+
+pm2-restart:
+	pm2 restart index
+
+edit-nginx:
+	sudo vim /etc/nginx/sites-available/default
+
+restart-nginx:
+	sudo service nginx restart
+
+mongo-init:
+	docker run --name mongo -p 27017:27017 -d -t mongo
+
+mongo-start:
+	docker start mongo
+
+mongo-stop:
+	docker stop mongo
+
+mongo-logs:
+	docker logs --details mongo
+
+mongo-exec:
+	docker exec -it mongo bash
