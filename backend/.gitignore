@@ -2,3 +2,4 @@ coverage
 node_modules
 .env
 .tmp/uploads/**.gif
+dist
